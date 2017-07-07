@@ -1,4 +1,5 @@
 <h1 class="jumbotron">All Stocked Prints</h1>
+<a href="admins/product"><h4>Add New Product</h4></a>
 
 <% @products.each do |product| %>
   <%= link_to product_path(product) do %>
@@ -7,7 +8,9 @@
     <%= product.artist %>
     <br>
     <hr>
-    <a href="/admin/project"><%= link_to "Delete"%></a>
+
+    <a href="admins/product"><h4>Delete</h4></a>
+
     <hr>
     <br>
     <% end %>

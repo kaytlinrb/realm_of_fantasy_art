@@ -5,5 +5,15 @@
 <br>
 <%= @product.description %>
 <br>
+<hr>
+
+<% @product.reviews.each do |review| %>
+<%= review.author  %>
+<%= review.content  %>
+<%= review.rating  %>
+<% end %>
+<hr>
 
 <%= link_to "Add Review", new_product_review_path(@product) %>
+<a href="admins/product"><h4>Update</h4></a>
+<a href="admins/product"><h4>Delete</h4></a>

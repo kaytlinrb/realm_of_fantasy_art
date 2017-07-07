@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    @product = Product.find(params[:product_id])
     @review = Review.new(review_params)
     if @review.save
       redirect_to  products_path
