@@ -1,0 +1,14 @@
+<h1 class="jumbotron">All Stocked Prints</h1>
+
+<% @products.each do |product| %>
+  <%= link_to product_path(product) do %>
+    <%= product.name %>
+    <br>
+    <%= product.artist %>
+    <br>
+    <hr>
+    <a href="/admin/project"><%= link_to "Delete"%></a>
+    <hr>
+    <br>
+    <% end %>
+<% end %>

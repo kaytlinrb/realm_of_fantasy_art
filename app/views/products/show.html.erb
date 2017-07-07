@@ -1,0 +1,9 @@
+<h1 class="jumbotron"><%= @product.name %></h1>
+<%= @product.artist %>
+<br>
+<%= @product.cost %>
+<br>
+<%= @product.description %>
+<br>
+
+<%= link_to "Add Review", new_product_review_path(@product) %>
