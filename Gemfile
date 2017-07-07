@@ -36,6 +36,7 @@ gem 'devise'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'jquery-rails'
 gem 'rails_admin', '~> 1.2'
+gem "paperclip", "~> 5.0.0"
 
 
 group :development, :test do

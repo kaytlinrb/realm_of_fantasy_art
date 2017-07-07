@@ -1,4 +1,6 @@
 <h1 class="jumbotron"><%= @product.name %></h1>
+<%= image_tag @image.image_file.url(:medium) %>
+<br>
 <%= @product.artist %>
 <br>
 <%= @product.cost %>
@@ -8,12 +10,15 @@
 <hr>
 
 <% @product.reviews.each do |review| %>
+<div class="card">
 <%= review.author  %>
 <%= review.content  %>
 <%= review.rating  %>
+</div>
 <% end %>
 <hr>
-
+<% if current_user %>
 <%= link_to "Add Review", new_product_review_path(@product) %>
+<% end %>
 <a href="admins/product"><h4>Update</h4></a>
 <a href="admins/product"><h4>Delete</h4></a>
