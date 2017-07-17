@@ -1,5 +1,7 @@
 <h1 class="jumbotron">All Stocked Prints</h1>
+<% if current_user && current_user.admin %>
 <a href="admins/product"><h4>Add New Product</h4></a>
+ <% end %>
 
 <% @products.each do |product| %>
   <%= link_to product_path(product) do %>
@@ -8,8 +10,9 @@
     <%= product.artist %>
     <br>
     <hr>
-
+    <% if current_user && current_user.admin %>
     <a href="admins/product"><h4>Delete</h4></a>
+    <% end %>
 
     <hr>
     <br>

@@ -20,5 +20,7 @@
 <% if current_user %>
 <%= link_to "Add Review", new_product_review_path(@product) %>
 <% end %>
+<% if current_user && current_user.admin %>
 <a href="admins/product"><h4>Update</h4></a>
 <a href="admins/product"><h4>Delete</h4></a>
+<% end %>

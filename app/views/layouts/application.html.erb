@@ -26,6 +26,9 @@
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
         </li>
       <% end %>
+      <% if current_user && current_user.admin %>
+          <li class="nav-item navbar-nav"><%= link_to 'Admin', rails_admin_path %></li>
+        <% end %>
     </nav>
     <%= yield %>
   </body>
