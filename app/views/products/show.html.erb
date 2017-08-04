@@ -1,13 +1,32 @@
-<h1 class="jumbotron"><%= @product.name %></h1>
-<%= image_tag @image.image_file.url(:medium) %>
+<nav>
+
+
+<div class="navbar-brand nav-home">
+
+<a href="/">Home</a><div class="jumbo-title">
+
+<div class="show-bg">
+</nav>
+
+<h1 class="jumbotron"><div id= "jumbo-title"><%= @product.name %></div></h1>
+<div class="d-flex justify-content-center">
+<img class="show-image-page" src="<%= @product.image.url %>" width="50%" height="50%">
 <br>
-<%= @product.artist %>
-<br>
-<%= @product.cost %>
-<br>
-<%= @product.description %>
+
+
+<div class="product-info">
+  <div class="product-content">
+    By <%= @product.artist %>
+    <br>
+    $<%= @product.cost %>
+    <br>
+    "<%= @product.description %>"
+  </div>
+</div>
 <br>
 <hr>
+
+
 
 <% @product.reviews.each do |review| %>
 <div class="card">
@@ -24,3 +43,4 @@
 <a href="admins/product"><h4>Update</h4></a>
 <a href="admins/product"><h4>Delete</h4></a>
 <% end %>
+</div>
